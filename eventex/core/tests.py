@@ -14,3 +14,6 @@ class HomeTest(TestCase):
         """Must use index.html"""
         self.assertTemplateUsed(self.response, 'index.html')
 
+    def test_subscribe_link(self):
+        """Must contain subscribe link"""
+        self.assertContains(self.response, 'href="/inscricao/"')
